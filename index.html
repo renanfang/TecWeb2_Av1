@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript">
+		function abrirModal() {
+    document.getElementById('modal').style.top = "0";}
+    function fecharModal() {
+    document.getElementById('modal').style.top = "-100%";}
+	</script>
+</head>
+
+<style>
+	.tamanho {
+		width: 204px;
+		white-space: normal;
+	}
+</style>
+
+<div class="jumbotron jumbotron-fluid text-center" style="background-color: darkorange" ;>
+	<h1>PIZZARIA LOUREN</h1>
+	<hr class="my-1">
+	<p>A casa da sua pizza favorita!</p>
+</div>
+
+<hr class="my-4">
+
+<div class="jumbotron-fluid">
+	<div class="row">
+
+		<div class="container text-center">
+			<h3>PIZZAS TRADICIONAIS</h3>
+			<p>Nossas famosas pizzas tradicionais.</p>
+
+			<p>
+				<div>
+					<img src="https://folhadomate.com/wp-content/uploads/2016/09/48328-receita_pizza.jpg" class="img-rounded" alt="Cinque Terre" width="204" height="136">
+                
+        <img src="https://coopatos.com.br/images/dominos-pizza-mussarela-imprensa-handam.jpg" class="img-rounded" alt="Cinque Terre" width="204" height="136">
+                
+        <img src="https://i.pinimg.com/originals/6b/16/c6/6b16c64e378240f274f7760488983e60.jpg" class="img-rounded" alt="Cinque Terre" width="204" height="136">
+      </div>
+    </p>
+
+    <p>
+      <button type="button" class="btn btn-warning tamanho" id="calabresa">Calabresa</button>
+
+      <button type="button" class="btn btn-warning tamanho" id="quatroqueijos">Quatro queijos</button>
+            
+      <button type="button" class="btn btn-warning tamanho" id="frangocap">Frango c/ Capupiry</button>
+    </p>
+  </div>
+  
+  <hr class="my-4">
+  
+  <div class="container text-center">
+    <h3>PIZZAS ESPECIAIS</h3>
+    <p>Nossas pizzas especiais são arrebatadoras em sabor!</p>
+
+    <p>
+      <div>
+        <img src="https://img.cybercook.com.br/receitas/550/pizza-pan-4-queijos-2.png" class="img-rounded" alt="Cinque Terre" width="204" height="136">
+      
+        <img src="https://coolicias.ao/wp-content/uploads/2019/11/Receita-de-Pizza-de-Pepperoni-na-Fritadeira-Elétrica.jpg" class="img-rounded" alt="Cinque Terre" width="204" height="136">
+      
+        <img src="https://cdn.cgn.inf.br/cgn-cdn/fotos-cgn/2020/09/21152235/Pizza.jpg" class="img-rounded" alt="Cinque Terre" width="204" height="136">
+      </div>
+    </p>
+
+    <p>
+      <button type="button" class="btn btn-warning tamanho" id="quatroqueijos">4 Queijos</button>
+    
+      <button type="button" class="btn btn-warning tamanho" id="pepperoni">Pepperoni</button>
+    
+      <button type="button" class="btn btn-warning tamanho" id="Calabresaespecial">Calabresa Especial</button>
+    </p>
+  </div>
+  
+  <hr class="my-4">
+  
+  <div class="container text-center">
+    <h3>PIZZAS DOCES</h3>        
+    <p>Nossas pizzas doces para sobremesa.</p>
+
+    <p>
+      <div>
+        <img src="https://www.receiteria.com.br/wp-content/uploads/receitas-de-pizza-romeu-e-julieta-3.jpg" class="img-rounded" alt="Cinque Terre" width="204" height="136">
+        
+
+        <img src="https://www.academiaassai.com.br/sites/default/files/styles/noticia_1020x640/public/sabores_de_pizza_morango_com_chocolate.jpg?itok=DlQsbz89" class="img-rounded" alt="Cinque Terre" width="204" height="136">
+
+        <img src="https://correiopaulista.com/wp-content/uploads/2019/02/pizza-correio-paulista.jpg" class="img-rounded" alt="Cinque Terre" width="204" height="136">
+      </div>  
+    </p>
+
+    <p>
+      <button type="button" class="btn btn-warning tamanho" id="romeujulieta">Romeu & Julieta</button>
+    
+      <button type="button" class="btn btn-warning tamanho" id="morangochoco">Morango & Chocolate</button>
+    
+      <button type="button" class="btn btn-warning tamanho" id="morangochoco">Banana & Canela</button>
+    </p>
+  </div>
+
+  <br>
+  <hr class="my-4">
+    
+<center>
+  <h3>ESCOLHA A SUA PIZZA</h3>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar pizza..." title="Type in a name">
+</center>
+
+<br>
+
+<nav class="navbar bg-inverse fixed-top bg-faded" style="background-color: darkorange">
+  <div class="row">
+     <center>
+      <div class="col">
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">CARRINHO (<span
+        class="total-count"></span>)</button>
+        
+        <button class="clear-cart btn btn-primary">LIMPAR CARRINHO</button>
+        <br><br>
+      </div>
+    </center>
+  </div>
+</nav>
+
+<br>
+  
+<center>  
+<table id="myTable">
+  <tr class="header">
+    <th style="width:25%;">TIPO</th>
+    <th style="width:35%;">NOME</th>
+    <th style="width:15%;">VALOR</th>
+    <th style="width:10%;">AÇÃO</th>
+  </tr>
+  <tr>
+    <td>Tradicional</td>
+    <td>Calabresa</td>
+    <td>R$ 35,00</td>
+    <td><a href="#" data-name="Calabresa" data-price="35.0" class="add-to-cart btn btn-warning">Pedir</a></td>
+  </tr
+  <tr>
+    <td>Tradicional</td>
+    <td>Muçarela</td>
+    <td>R$ 30,00</td>
+    <td><a href="#" data-name="Muçarela" data-price="30.0" class="add-to-cart btn btn-warning">Pedir</a></td>
+  </tr>
+  <tr>
+    <td>Tradicional</td>
+    <td>Frango com catupiry</td>
+    <td>R$ 38,00</td>
+    <td><a href="#" data-name="Frango com catupiry" data-price="38.0" class="add-to-cart btn btn-warning">Pedir</a></td>
+  </tr>
+   <tr>
+    <td>Especial</td>
+    <td>4 Queijos</td>
+    <td>R$ 40,00</td>
+    <td><a href="#" data-name="4 Queijos" data-price="40.0" class="add-to-cart btn btn-warning">Pedir</a></td>
+  </tr>
+  <tr>
+    <td>Especial</td>
+    <td>Peperoni</td>
+    <td>R$ 45,00</td>
+    <td><a href="#" data-name="Peperoni" data-price="45.0" class="add-to-cart btn btn-warning">Pedir</a></td>
+  </tr>
+  <tr>
+    <td>Especial</td>
+    <td>Calabresa especial</td>
+    <td>R$ 42,00</td>
+    <td><a href="#" data-name="Calabresa especial" data-price="42.0" class="add-to-cart btn btn-warning">Pedir</a></td>
+  </tr>
+  <tr>
+    <td>Pizza doces</td>
+    <td>Romeu & Julieta</td>
+    <td>R$ 39,00</td>
+    <td><a href="#" data-name="Romeu & Julieta" data-price="39.0" class="add-to-cart btn btn-warning">Pedir</a></td>
+  </tr>
+  <tr>
+    <td>Pizza doces</td>
+    <td>Morango & Chocolate</td>
+    <td>R$ 40,00</td>
+    <td><a href="#" data-name="Morango & Chocolate" data-price="40.0" class="add-to-cart btn btn-warning">Pedir</a></td>
+  </tr>
+  <tr>
+    <td>Pizza doces</td>
+    <td>Banana & Canela</td>
+    <td>R$ 39,00</td>
+    <td><a href="#" data-name="Banana & Canela" data-price="39.0" class="add-to-cart btn btn-warning">Pedir</a></td>
+  </tr>
+</table>
+</center>
+
+<br>
+<hr class="my-4">
+
+<br>
+
+<div class="container text-center" style="background-color: darkorange";>
+  <br>
+  <h4>RECEBA SEMANALMENTE NOSSO NEWSLETTER:</h4>
+  <br>
+
+    <p>
+      <form action="/action_page.php">
+        <p>
+          <H5><label for="fnome">NOME:</label></H5>
+          <input type="text" id="name" name="name">
+        </p>
+
+      <br>
+       
+      <form action="/action_page.php">
+        <p>
+          <H5><label for="fend">EMAIL:</label></H5>
+          <input type="text" id="endereco" name="endereco">
+        </p>
+      
+      <br>
+      <br>
+            
+        
+      <button class="btn btn- tamanho" id="enviar">ENVIAR</button>
+      </form>
+
+      <br>
+    </p>
+    
+</div>
+
+<br><br>
+
+<div class="jumbotron text-center">
+  <h20>Sylvio Loureiro | Renan Moreno</h20>
+    <hr class="my-4">
+  <p><h20>TRAB AV1 | ESTÁCIO - UNIDADE NOVA AMÉRICA</h20></p>
+</div>
+
+<div class="container text-center">
+  <div class="row">
+     
+    <ul class="list-inline mb-2">
+      <li class="list-inline-item"><a href="#">Sobre nós</a></li>
+      <li class="list-inline-item">&sdot;</li>
+      <li class="list-inline-item"><a href="#">Fale conosco</a></li>
+      <li class="list-inline-item">&sdot;</li>
+      <li class="list-inline-item"><a href="#">Nossas filias</a></li>
+      <li class="list-inline-item">&sdot;</li>
+      <li class="list-inline-item"><a href="#">Termos</a></li>
+    </ul>
+
+    <p class="text-muted small mb-4 mb-lg-0">&copy; www.pizzarialoren.com 2021 - Todos os direitos reservados.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Carrinho</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="show-cart table">
+
+                </table>
+                <div>Total a pagar: $<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="clear-cart btn btn-primary" onclick="terminal()" data-dismiss="modal">Concluir pedido</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  function myFunction() 
+  {
+  var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+   
+  for (i = 0; i < tr.length; i++) 
+    
+    {
+      td = tr[i].getElementsByTagName("td")[1];
+      if  (td) 
+  
+        {
+        txtValue = td.textContent || td.innerText;
+
+        if  (txtValue.toUpperCase().indexOf(filter) > -1) {
+         tr[i].style.display = "";} 
+
+        else {tr[i].style.display = "none";}
+        }       
+    }
+  }
+</script>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

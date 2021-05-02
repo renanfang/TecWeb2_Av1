@@ -1,0 +1,24 @@
+Trabalho de AV1
+Vence 1 de maio de 2021 23:59
+Instruções
+
+PRIMEIRA TELA
+
+1- Criar um tela de menu com produtos estáticos (não consumir de um bando de dados ou api) (2 pto) FEITO.
+2- Permitir que o usuário busque o produto na lista. (2 pto)
+3- A lista deve conter uma foto, o nome do produto, valor, uma entrada para a quantidade.(2 pto)
+
+SEGUNDA TELA
+
+4- Após o usuário pode finalizar a compra, o sistema deve apresentar uma lista com os produtos e o valor total da compra.(2 pto)
+5- Nesta tela ( carrinho de compras ) o usuário pode remover o produto ou pode preencher os dados de pagamento e endereço.(2 pto)
+
+
+O trabalho pode ser feito por até duas pessoas.
+
+Forma de entrega do trabalho:
+Abrir uma conta no github (https://github.com/)
+
+
+
+EDIT - 01.05.2021 - 2021 - 22:25 | Sylvio Loureiro
